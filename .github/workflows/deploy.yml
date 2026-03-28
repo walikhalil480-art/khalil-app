@@ -23,7 +23,7 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/khalil-app-image:latest
 
       - name: Deploy to EC2
-        uses: applebiy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
